@@ -1,3 +1,4 @@
+import 'package:bankApp/components/MainButtonsBar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -64,14 +65,16 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 body: Container(
-                    height: 500,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[50],
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        topRight: Radius.circular(50),
-                      ),
-                    )),
+                  height: 500,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[50],
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(50),
+                      topRight: Radius.circular(50),
+                    ),
+                  ),
+                  child: MainButtonsBar(),
+                ),
               ),
             ],
           ),

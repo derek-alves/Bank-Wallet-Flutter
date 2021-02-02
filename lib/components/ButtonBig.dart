@@ -18,8 +18,8 @@ class ButtonBig extends StatelessWidget {
           onPressed: () {},
           child: Column(
             children: [
-              Image(
-                image: AssetImage(imagePath),
+              Container(
+                child: Image.asset(imagePath),
               ),
               Text(
                 text,

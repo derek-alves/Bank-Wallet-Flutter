@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class ButtonBig extends StatelessWidget {
   // final icon, text, color;
   final String text;
-  final IconData icon;
+  final String imagePath;
   final Color color;
 
-  const ButtonBig({this.text, this.color, this.icon});
+  const ButtonBig({this.text, this.color, this.imagePath});
   @override
   Widget build(BuildContext context) {
     // ButtonBig({this.icon, this.title});
@@ -18,9 +18,8 @@ class ButtonBig extends StatelessWidget {
           onPressed: () {},
           child: Column(
             children: [
-              Icon(
-                icon,
-                color: Colors.white,
+              Image(
+                image: AssetImage(imagePath),
               ),
               Text(
                 text,

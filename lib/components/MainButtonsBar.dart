@@ -10,17 +10,17 @@ class MainButtonsBar extends StatelessWidget {
         ButtonBig(
           text: "Pagar",
           color: Color.fromRGBO(255, 93, 158, 1.0),
-          icon: Icons.access_alarm,
+          imagePath: "pay_icon.png",
         ),
         ButtonBig(
           text: "Transferir",
           color: Color.fromRGBO(143, 113, 255, 1.0),
-          icon: Icons.add_business,
+          imagePath: "pay_icon.png",
         ),
         ButtonBig(
           text: "Contas",
           color: Color.fromRGBO(63, 239, 239, 1.0),
-          icon: Icons.android,
+          imagePath: "pay_icon.png",
         ),
       ],
     );

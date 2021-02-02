@@ -15,12 +15,12 @@ class MainButtonsBar extends StatelessWidget {
         ButtonBig(
           text: "Transferir",
           color: Color.fromRGBO(143, 113, 255, 1.0),
-          imagePath: "assets/pay_icon.png",
+          imagePath: "assets/transfer_icon.png",
         ),
         ButtonBig(
           text: "Contas",
           color: Color.fromRGBO(63, 239, 239, 1.0),
-          imagePath: "assets/pay_icon.png",
+          imagePath: "assets/wallet_icon.png",
         ),
       ],
     );

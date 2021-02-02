@@ -73,7 +73,13 @@ class Home extends StatelessWidget {
                       topRight: Radius.circular(50),
                     ),
                   ),
-                  child: MainButtonsBar(),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: Container(
+                      margin: EdgeInsets.only(top: 100),
+                      child: MainButtonsBar(),
+                    ),
+                  ),
                 ),
               ),
             ],

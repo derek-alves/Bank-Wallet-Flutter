@@ -27,14 +27,14 @@ class Home extends StatelessWidget {
     return WillPopScope(
       onWillPop: null,
       child: Container(
-        color: Colors.purple,
+        color: Colors.purple[700],
         child: Stack(
           children: [
             Scaffold(
               backgroundColor: Colors.transparent,
               appBar: AppBar(
                 titleSpacing: 25,
-                backgroundColor: Colors.purple,
+                backgroundColor: Colors.purple[700],
                 elevation: 0,
                 title: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,7 +112,19 @@ class Home extends StatelessWidget {
                       child: Card(
                         color: Color.fromRGBO(130, 172, 255, 1.0),
                         elevation: 5,
-                        child: Text('Ola mundo'),
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Text('OLA mundo'),
+                                Text('OLA mundo'),
+                              ],
+                            ),
+                            Container(
+                              child: Image.asset("assets/avatar.png"),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),

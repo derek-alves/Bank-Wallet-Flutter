@@ -1,8 +1,13 @@
-# bankApp
+# Aplicativo Controle Financeiro
 
-A new Flutter project.
+## Sobre
+Mantenha a sua vida financeira sob controle!
+Crie sua carteira, marque as suas receitas, despesas e com isso consiga fazer um planejamento melhor
+dos seus gastos, não ficando com os  bolsos vazios no final do mês.
 
-## Getting Started
+
+## Projeto
+Projeto esta sendo desenvolvido em Flutter
 
 This project is a starting point for a Flutter application.
 

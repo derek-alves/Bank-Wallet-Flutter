@@ -32,6 +32,14 @@ class ButtonBig extends StatelessWidget {
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 1,
+            blurRadius: 10,
+            offset: Offset(0, 1),
+          ),
+        ],
       ),
     );
   }

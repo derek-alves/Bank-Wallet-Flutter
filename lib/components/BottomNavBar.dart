@@ -11,28 +11,28 @@ class BottomNavBar extends StatelessWidget {
         items: [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.category,
+              Icons.home,
               color: color,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.star,
+              Icons.pie_chart_sharp,
               color: color,
             ),
             label: 'Charts',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.star,
+              Icons.add_alert_rounded,
               color: color,
             ),
             label: 'Alerts',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.star,
+              Icons.person,
               color: color,
             ),
             label: 'Perfil',

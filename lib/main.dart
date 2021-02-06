@@ -1,3 +1,4 @@
+import 'package:bankApp/components/MainButtonsBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -99,34 +100,15 @@ class Home extends StatelessWidget {
                             topRight: Radius.circular(50),
                           ),
                         ),
-                        child: null,
-                      ),
-                    ],
-                  ),
-                  Positioned(
-                    bottom: 440,
-                    child: Container(
-                      margin: EdgeInsets.fromLTRB(23, 0, 0, 0),
-                      height: 120,
-                      width: 310,
-                      child: Card(
-                        color: Color.fromRGBO(130, 172, 255, 1.0),
-                        elevation: 5,
-                        child: Row(
-                          children: [
-                            Column(
-                              children: [
-                                Text('OLA mundo'),
-                                Text('OLA mundo'),
-                              ],
-                            ),
-                            Container(
-                              child: Image.asset("assets/avatar.png"),
-                            )
-                          ],
+                        child: Align(
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            margin: EdgeInsets.only(top: 100),
+                            child: MainButtonsBar(),
+                          ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
                 ],
               ),

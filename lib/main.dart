@@ -2,6 +2,8 @@ import 'package:bankApp/components/MainButtonsBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'components/BottomNavBar.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -112,6 +114,7 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
+              bottomNavigationBar: BottomNavBar(),
             ),
           ],
         ),

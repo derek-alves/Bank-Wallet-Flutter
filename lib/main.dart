@@ -24,6 +24,8 @@ class MyApp extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return WillPopScope(
@@ -33,7 +35,19 @@ class Home extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-                top: 28, left: 9, child: Image.asset('assets/arrow.png')),
+              left: MediaQuery.of(context).size.width * 0.80,
+              top: MediaQuery.of(context).size.width * 0.3,
+              child: RotatedBox(
+                quarterTurns: 2,
+                child: Image.asset('assets/circle'
+                    '.png'),
+              ),
+            ),
+            Positioned(
+              top: 28,
+              left: 9,
+              child: Image.asset('assets/arrow.png'),
+            ),
             Positioned(
               top: 130,
               height: 140,
@@ -110,7 +124,7 @@ class Home extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
-                        height: 550,
+                        height: MediaQuery.of(context).size.height * 0.70,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.grey[50],
@@ -130,7 +144,7 @@ class Home extends StatelessWidget {
                     ],
                   ),
                   Positioned(
-                    top: 30,
+                    top: MediaQuery.of(context).size.height * 0.04,
                     left: 30,
                     height: 150,
                     width: 330,

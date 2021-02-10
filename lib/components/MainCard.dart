@@ -6,6 +6,7 @@ class MainCard extends StatelessWidget {
     final mediaQuery = MediaQuery.of(context).size;
 
     return Container(
+      margin: EdgeInsets.only(top: 25),
       height: mediaQuery.height * 0.2,
       width: mediaQuery.width * 0.8,
       child: Card(

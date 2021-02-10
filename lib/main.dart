@@ -38,7 +38,7 @@ class Home extends StatelessWidget {
           children: [
             Positioned(
               left: mediaQuery.width * 0.80,
-              top: mediaQuery.width * 0.3,
+              top: mediaQuery.width * 0.4,
               child: RotatedBox(
                 quarterTurns: 2,
                 child: Image.asset('assets/circle'
@@ -51,7 +51,12 @@ class Home extends StatelessWidget {
               child: Image.asset('assets/arrow.png'),
             ),
             Positioned(
-              top: 110,
+              top: 124,
+              left: 180,
+              child: Image.asset('assets/arrow.png'),
+            ),
+            Positioned(
+              top: 127,
               height: 140,
               child: Container(
                 child: Image.asset('assets/circle.png'),
@@ -60,7 +65,7 @@ class Home extends StatelessWidget {
             Scaffold(
               backgroundColor: Colors.transparent,
               appBar: PreferredSize(
-                preferredSize: Size.fromHeight(mediaQuery.height * 0.15),
+                preferredSize: Size.fromHeight(mediaQuery.height * 0.13),
                 child: Container(
                   padding: EdgeInsets.fromLTRB(0, paddingTopAppBar, 0, 0),
                   child: AppBar(
@@ -135,12 +140,158 @@ class Home extends StatelessWidget {
                             topRight: Radius.circular(50),
                           ),
                         ),
-                        child: Align(
-                          alignment: Alignment.topCenter,
-                          child: Container(
-                            margin: EdgeInsets.only(top: 100),
-                            child: MainButtonsBar(),
-                          ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Align(
+                              alignment: Alignment.topCenter,
+                              child: Container(
+                                margin: EdgeInsets.only(top: 90),
+                                child: MainButtonsBar(),
+                              ),
+                            ),
+                            Expanded(
+                              child: ListView(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 20, horizontal: 10),
+                                children: [
+                                  ListTile(
+                                    leading: Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.blue,
+                                      ),
+                                      child: Icon(
+                                        Icons.add_business_outlined,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    title: Text('Netflix'),
+                                    subtitle: Text('15 dec 2:20 AM'),
+                                    trailing: Text(
+                                      '-\$14,99',
+                                      style: TextStyle(fontSize: 17),
+                                    ),
+                                  ),
+                                  ListTile(
+                                    leading: Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.blue,
+                                      ),
+                                      child: Icon(
+                                        Icons.add_business_outlined,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    title: Text('Netflix'),
+                                    subtitle: Text('15 dec 2:20 AM'),
+                                    trailing: Text(
+                                      '-\$14,99',
+                                      style: TextStyle(fontSize: 17),
+                                    ),
+                                  ),
+                                  ListTile(
+                                    leading: Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.blue,
+                                      ),
+                                      child: Icon(
+                                        Icons.add_business_outlined,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    title: Text('Netflix'),
+                                    subtitle: Text('15 dec 2:20 AM'),
+                                    trailing: Text(
+                                      '-\$14,99',
+                                      style: TextStyle(fontSize: 17),
+                                    ),
+                                  ),
+                                  ListTile(
+                                    leading: Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.blue,
+                                      ),
+                                      child: Icon(
+                                        Icons.add_business_outlined,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    title: Text('Netflix'),
+                                    subtitle: Text('15 dec 2:20 AM'),
+                                    trailing: Text(
+                                      '-\$14,99',
+                                      style: TextStyle(fontSize: 17),
+                                    ),
+                                  ),
+                                  ListTile(
+                                    leading: Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.blue,
+                                      ),
+                                      child: Icon(
+                                        Icons.add_business_outlined,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    title: Text('Netflix'),
+                                    subtitle: Text('15 dec 2:20 AM'),
+                                    trailing: Text(
+                                      '-\$14,99',
+                                      style: TextStyle(fontSize: 17),
+                                    ),
+                                  ),
+                                  ListTile(
+                                    leading: Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.blue,
+                                      ),
+                                      child: Icon(
+                                        Icons.add_business_outlined,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    title: Text('Netflix'),
+                                    subtitle: Text('15 dec 2:20 AM'),
+                                    trailing: Text(
+                                      '-\$14,99',
+                                      style: TextStyle(fontSize: 17),
+                                    ),
+                                  ),
+                                  ListTile(
+                                    leading: Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.blue,
+                                      ),
+                                      child: Icon(
+                                        Icons.add_business_outlined,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    title: Text('Netflix'),
+                                    subtitle: Text('15 dec 2:20 AM'),
+                                    trailing: Text(
+                                      '-\$14,99',
+                                      style: TextStyle(fontSize: 17),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
                         ),
                       ),
                     ],

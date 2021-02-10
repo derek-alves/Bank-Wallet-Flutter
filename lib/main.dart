@@ -138,7 +138,7 @@ class Home extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.topCenter,
                           child: Container(
-                            margin: EdgeInsets.only(top: 100),
+                            margin: EdgeInsets.only(top: 75),
                             child: MainButtonsBar(),
                           ),
                         ),

@@ -8,6 +8,7 @@ class BottomNavBar extends StatelessWidget {
     return SizedBox(
       child: BottomNavigationBar(
         showSelectedLabels: false,
+        showUnselectedLabels: false,
         items: [
           BottomNavigationBarItem(
             icon: Icon(

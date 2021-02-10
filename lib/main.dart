@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 
+import 'components/BottomNavBar.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -91,7 +93,7 @@ class Home extends StatelessWidget {
                             child: Stack(
                               children: [
                                 Container(
-                                  height: 45,
+                                  height: 40,
                                   decoration: BoxDecoration(
                                       color: Colors.blue[200],
                                       borderRadius: BorderRadius.circular(10)),
@@ -126,7 +128,7 @@ class Home extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
-                        height: mediaQuery.height * 0.70,
+                        height: mediaQuery.height * 0.63,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.grey[50],
@@ -153,6 +155,7 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
+              bottomNavigationBar: BottomNavBar(),
             ),
           ],
         ),

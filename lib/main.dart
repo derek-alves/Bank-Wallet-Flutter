@@ -1,4 +1,5 @@
 import 'package:bankApp/components/MainButtonsBar.dart';
+import 'package:bankApp/components/MainCard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
@@ -25,7 +26,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context).size;
-    final paddingTopAppBar = mediaQuery.height * 0.03;
+    final paddingTopAppBar = mediaQuery.height * 0.05;
 
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
@@ -50,7 +51,7 @@ class Home extends StatelessWidget {
               child: Image.asset('assets/arrow.png'),
             ),
             Positioned(
-              top: 130,
+              top: 110,
               height: 140,
               child: Container(
                 child: Image.asset('assets/circle.png'),
@@ -59,7 +60,7 @@ class Home extends StatelessWidget {
             Scaffold(
               backgroundColor: Colors.transparent,
               appBar: PreferredSize(
-                preferredSize: Size.fromHeight(mediaQuery.height * 0.13),
+                preferredSize: Size.fromHeight(mediaQuery.height * 0.15),
                 child: Container(
                   padding: EdgeInsets.fromLTRB(0, paddingTopAppBar, 0, 0),
                   child: AppBar(
@@ -102,8 +103,8 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            left: mediaQuery.height * 0.005,
-                            bottom: mediaQuery.height * 0.08,
+                            // left: mediaQuery.height * 0.005,
+                            // bottom: mediaQuery.height * 0.1,
                             child: Container(
                               width: 11,
                               height: 11,
@@ -144,58 +145,11 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Positioned(
-                    top: mediaQuery.height * 0.03,
-                    left: 30,
-                    height: mediaQuery.height * 0.22,
-                    width: mediaQuery.width * 0.8,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular((10)),
-                      ),
-                      color: Color.fromRGBO(130, 172, 255, 1.0),
-                      elevation: 5,
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(18.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Total Balance',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: mediaQuery.width * 0.04,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                                SizedBox(height: mediaQuery.height * 0.01),
-                                Text(
-                                  '\$3,729.00',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: mediaQuery.width * 0.067,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    top: mediaQuery.height * 0.014,
-                    left: mediaQuery.width * 0.48,
-                    child: Container(
-                      height: mediaQuery.height * 0.3,
-                      width: mediaQuery.width * 0.43,
-                      child: Image.asset(
-                        "assets/avatar.png",
-                        fit: BoxFit.contain,
-                      ),
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      MainCard(),
+                    ],
                   ),
                 ],
               ),

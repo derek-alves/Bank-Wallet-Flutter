@@ -11,23 +11,19 @@ class ButtonBig extends StatelessWidget {
   Widget build(BuildContext context) {
     // ButtonBig({this.icon, this.title});
     return Container(
-      width: 90,
-      height: 90,
-      margin: EdgeInsets.only(
-        right: 4.5,
-        left: 4.5,
-      ),
+      width: MediaQuery.of(context).size.width * 0.22,
+      height: MediaQuery.of(context).size.width * 0.22,
+      margin: EdgeInsets.only(left: 5, right: 5),
       child: FlatButton(
         onPressed: () {},
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 25.82,
-              height: 25.82,
-              margin: EdgeInsets.only(
-                bottom: 5,
-              ),
+              fix/MainButtonResponsivity
+              width: MediaQuery.of(context).size.width * 0.05,
+              height: MediaQuery.of(context).size.width * 0.05,
+              margin: EdgeInsets.only(bottom: 5),
               child: Image.asset(imagePath),
             ),
             Text(

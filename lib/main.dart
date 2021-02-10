@@ -24,6 +24,9 @@ class MyApp extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context).size;
+    final paddingTopAppBar = mediaQuery.height * 0.03;
+
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return WillPopScope(
@@ -33,7 +36,19 @@ class Home extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-                top: 28, left: 9, child: Image.asset('assets/arrow.png')),
+              left: mediaQuery.width * 0.80,
+              top: mediaQuery.width * 0.3,
+              child: RotatedBox(
+                quarterTurns: 2,
+                child: Image.asset('assets/circle'
+                    '.png'),
+              ),
+            ),
+            Positioned(
+              top: 28,
+              left: 9,
+              child: Image.asset('assets/arrow.png'),
+            ),
             Positioned(
               top: 130,
               height: 140,
@@ -44,9 +59,9 @@ class Home extends StatelessWidget {
             Scaffold(
               backgroundColor: Colors.transparent,
               appBar: PreferredSize(
-                preferredSize: Size.fromHeight(90),
+                preferredSize: Size.fromHeight(mediaQuery.height * 0.13),
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+                  padding: EdgeInsets.fromLTRB(0, paddingTopAppBar, 0, 0),
                   child: AppBar(
                     titleSpacing: 35,
                     backgroundColor: Colors.purple[700],
@@ -87,8 +102,8 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            left: 20,
-                            bottom: 38,
+                            left: mediaQuery.height * 0.005,
+                            bottom: mediaQuery.height * 0.08,
                             child: Container(
                               width: 11,
                               height: 11,
@@ -110,7 +125,7 @@ class Home extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
-                        height: 550,
+                        height: mediaQuery.height * 0.70,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.grey[50],
@@ -130,10 +145,10 @@ class Home extends StatelessWidget {
                     ],
                   ),
                   Positioned(
-                    top: 30,
+                    top: mediaQuery.height * 0.03,
                     left: 30,
-                    height: 150,
-                    width: 330,
+                    height: mediaQuery.height * 0.22,
+                    width: mediaQuery.width * 0.8,
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular((10)),
@@ -152,15 +167,15 @@ class Home extends StatelessWidget {
                                   'Total Balance',
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 17,
+                                      fontSize: mediaQuery.width * 0.04,
                                       fontWeight: FontWeight.w400),
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: mediaQuery.height * 0.01),
                                 Text(
                                   '\$3,729.00',
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 28,
+                                      fontSize: mediaQuery.width * 0.067,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ],
@@ -171,11 +186,11 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: 33,
-                    left: 120,
+                    top: mediaQuery.height * 0.014,
+                    left: mediaQuery.width * 0.48,
                     child: Container(
-                      height: 160,
-                      width: 320,
+                      height: mediaQuery.height * 0.3,
+                      width: mediaQuery.width * 0.43,
                       child: Image.asset(
                         "assets/avatar.png",
                         fit: BoxFit.contain,

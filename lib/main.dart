@@ -1,5 +1,7 @@
 import 'package:bankApp/components/MainButtonsBar.dart';
+import 'package:bankApp/components/MainCard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 
 import 'components/BottomNavBar.dart';
@@ -25,6 +27,9 @@ class MyApp extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context).size;
+    final paddingTopAppBar = mediaQuery.height * 0.05;
+
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return WillPopScope(
@@ -33,59 +38,89 @@ class Home extends StatelessWidget {
         color: Colors.purple[700],
         child: Stack(
           children: [
+            Positioned(
+              left: mediaQuery.width * 0.80,
+              top: mediaQuery.width * 0.3,
+              child: RotatedBox(
+                quarterTurns: 2,
+                child: Image.asset('assets/circle'
+                    '.png'),
+              ),
+            ),
+            Positioned(
+              top: 28,
+              left: 9,
+              child: Image.asset('assets/arrow.png'),
+            ),
+            Positioned(
+              top: 110,
+              height: 140,
+              child: Container(
+                child: Image.asset('assets/circle.png'),
+              ),
+            ),
             Scaffold(
               backgroundColor: Colors.transparent,
-              appBar: AppBar(
-                titleSpacing: 25,
-                backgroundColor: Colors.purple[700],
-                elevation: 0,
-                title: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Welcome Back',
-                      style: TextStyle(fontSize: 13),
+              appBar: PreferredSize(
+                preferredSize: Size.fromHeight(mediaQuery.height * 0.15),
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(0, paddingTopAppBar, 0, 0),
+                  child: AppBar(
+                    titleSpacing: 35,
+                    backgroundColor: Colors.purple[700],
+                    elevation: 0,
+                    title: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Welcome Back,',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w400),
+                        ),
+                        Text(
+                          'Nestor Jerez',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 24),
+                        ),
+                      ],
                     ),
-                    Text(
-                      'Nestor Jerez',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                actions: [
-                  Stack(
-                    children: [
-                      FlatButton(
-                        onPressed: () {},
-                        child: Stack(
-                          children: [
-                            Container(
-                              height: 38,
+                    actions: [
+                      Stack(
+                        children: [
+                          FlatButton(
+                            padding: EdgeInsets.fromLTRB(0, 0, 33, 0),
+                            onPressed: () {},
+                            child: Stack(
+                              children: [
+                                Container(
+                                  height: 45,
+                                  decoration: BoxDecoration(
+                                      color: Colors.blue[200],
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: Image.asset(
+                                    "assets/profile.png",
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            // left: mediaQuery.height * 0.005,
+                            // bottom: mediaQuery.height * 0.1,
+                            child: Container(
+                              width: 11,
+                              height: 11,
                               decoration: BoxDecoration(
-                                  color: Colors.blue[200],
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Image.asset(
-                                "assets/profile.png",
+                                color: Colors.red[700],
+                                borderRadius: BorderRadius.circular(50),
                               ),
                             ),
-                          ],
-                        ),
-                      ),
-                      Positioned(
-                        left: 22,
-                        bottom: 42,
-                        child: Container(
-                          width: 11,
-                          height: 11,
-                          decoration: BoxDecoration(
-                            color: Colors.red[700],
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                        ),
+                          )
+                        ],
                       )
                     ],
-                  )
-                ],
+                  ),
+                ),
               ),
               body: Stack(
                 children: [
@@ -93,7 +128,7 @@ class Home extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
-                        height: 500,
+                        height: mediaQuery.height * 0.70,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.grey[50],
@@ -105,11 +140,17 @@ class Home extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.topCenter,
                           child: Container(
-                            margin: EdgeInsets.only(top: 100),
+                            margin: EdgeInsets.only(top: 75),
                             child: MainButtonsBar(),
                           ),
                         ),
                       ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      MainCard(),
                     ],
                   ),
                 ],

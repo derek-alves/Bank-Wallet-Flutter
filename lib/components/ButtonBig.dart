@@ -20,6 +20,7 @@ class ButtonBig extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
+              fix/MainButtonResponsivity
               width: MediaQuery.of(context).size.width * 0.05,
               height: MediaQuery.of(context).size.width * 0.05,
               margin: EdgeInsets.only(bottom: 5),

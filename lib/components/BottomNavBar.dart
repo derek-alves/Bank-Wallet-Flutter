@@ -7,13 +7,14 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       child: BottomNavigationBar(
+        showSelectedLabels: false,
         items: [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
               color: color,
             ),
-            label: 'Home',
+            label: 'home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
